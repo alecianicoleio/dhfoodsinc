@@ -1,0 +1,237 @@
+
+/*********************
+COUPONS PAGE
+*********************/
+
+.coupons-page {
+
+	//border: 1px solid red;
+
+	.ptb_loops_wrapper {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: stretch;
+		&:before,
+		&:after { display: none !important; }
+	}
+
+	.ptb_post.type-coupon {
+
+		//border: 1px solid green; 
+		background: $white;
+		border-radius: 5px;
+		overflow: hidden;
+		margin-bottom: 14px !important;
+
+		&:hover,
+		&:active,
+		&:focus {
+			transition: all 0.5s;
+			transform: scale(0.9);
+			-webkit-box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.18);
+			-moz-box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.18);
+			box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.18);
+		}
+
+		@include respond-to(mobile-sm) {
+			width: calc(50% - 14px) !important;
+			margin-left: 0 !important;
+			margin-right: 14px !important;
+		}
+
+		@include respond-to(mobile) {
+			width: calc(33.3% - 14px) !important;
+		}
+
+		@include respond-to(tablet) {
+			width: calc(25% - 14px) !important;
+		}
+
+		// CONTAINER ROW
+
+		.ptb_items_wrapper,
+		.ptb_coupon_row { height: 100%; }
+		.ptb_coupon_row {
+			&:after { display: none; }
+		}
+
+		// IMAGE COLUMN
+		.ptb_coupon_row .ptb_col_first {
+			text-align: center;
+			.ptb_thumbnail { 
+				max-width: 350px;
+				margin: 0 auto; 
+			} 
+		}
+
+		// TEXT COLUMN
+		.ptb_coupon_row .ptb_col_last {
+
+			.ptb_module.ptb_title {
+				width: 100%;
+				h2 {
+					@include font-size(2.0);
+					line-height: 1;
+					position: relative;
+				}
+				a { 
+					display: block;
+					position: relative;
+					padding: 0 20px 20px 20px;
+				}
+				a:after {
+					display: block;
+					clear: left;
+					content: "View Coupon";
+					background: $yellow;
+					color: $white;
+					padding: 12px 0px !important;
+	    			line-height: 18px;
+	    			border-radius: 0px;
+	    			text-transform: uppercase;
+	    			text-align: center;
+	    			width: 100%;
+	    			border-radius: 5px; 
+	    			@include font-size(1.8);
+	    			margin: 20px 0 0 0 !important;
+	    			@include respond-to(mobile-sm) {
+	    				//margin: 0 !important;
+	    			}
+				}
+				a:focus:after,
+				a:active:after,
+				a:hover:after {
+					background: $yellow-active;
+				}
+			}
+
+			.ptb_discount {
+				color: $green-active;
+				@include font-size(1.6);
+				font-weight: 700;
+				width: 100%;
+				height: 24px;
+			}
+
+			.ptb_title,
+			.ptb_discount {
+				text-align: center;
+			}
+
+		}
+
+		@include respond-to(mobile-sm) { 
+			.ptb_coupon_row .ptb_col_first,
+			.ptb_coupon_row .ptb_col_last {
+				width: 100% !important;
+				flex-basis: 100%; 
+			}
+
+			.ptb_coupon_row .ptb_col_first{
+				flex-grow: 1;
+			}
+
+			.ptb_coupon_row .ptb_col_last {
+				flex-grow: 2;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end; 
+			}
+		}
+
+	}
+
+}
+
+
+/*********************
+INDIVIDUAL COUPON
+*********************/
+
+.single-coupon {
+
+	.coupon {
+		@include page-wrap();
+		max-width: 390px;
+		margin: 0 auto;
+		padding-top: 40px; 
+		margin-bottom: 40px; 
+		
+		.entry-content {
+			border: 3px dotted $black; 
+			background: $white;
+			.ptb_discount,
+			.ptb_title a { 
+				@include font-size(2.0); 
+				text-align: center;
+				margin: 0; 
+			}
+			.ptb_discount,
+			.ptb_title,
+			.ptb_coupon_fine_print { 
+				margin: 0; 
+				padding: 0 30px; 
+			}
+			.ptb_expiration {
+				padding: 0 30px 30px 30px; 
+				text-align: center;
+				text-transform: uppercase;
+				font-weight: bold;
+				* > { display: inline; }
+			}
+			.ptb_coupon_fine_print { text-align: center; }
+			.ptb_title {
+				h1 { 
+					@include font-size(2.0);
+					line-height: 1;
+					text-align: center; 
+				}
+				a:active,
+				a:focus,
+				a:hover { color: $green; }
+			}
+			.watermark-logo {
+				display: none;
+			}
+			.print-coupon {
+				padding: 0 30px 30px 30px; 
+				a {
+					display: block;
+					width: 100%; 
+					background: $green;
+					color: $white !important;
+					@include font-size(1.5);
+					text-transform: uppercase;
+					text-align: center;
+					font-family: 'Lato', sans-serif;
+					padding: 10px;
+					margin: 0; 
+					&:active, 
+					&:focus, 
+					&:hover {
+						background: $green-active;
+					}
+				}
+			}
+		} 
+	}
+
+}
+
+@media print {
+	.header,
+	.footer { display: none; }
+	a[href]:after,
+	.print-coupon { display: none; }
+
+	.ptb_expiration { padding: 0 30px 10px 30px !important; } 
+	.watermark-logo { 
+		display: block !important; 
+		padding-left: 50px; 
+		padding-right: 50px; 
+	}
+}
+
+

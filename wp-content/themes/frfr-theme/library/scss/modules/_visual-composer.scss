@@ -1,0 +1,172 @@
+/********************
+Rows
+********************/
+.wpb_row {
+	margin-bottom:20px;
+}
+.vc_row {
+	&:before,
+	&:after { display: none; }
+}
+.wpb_row,
+.wpb_text_column { 
+	margin-bottom: 0; 
+}
+
+/********************
+Separator Line
+********************/
+.vc_separator .vc_sep_holder .vc_sep_line {
+	border-color: $light-gray;
+}
+
+/********************
+Accordion
+********************/
+.vc_tta-accordion {
+	// Active Header Styles
+	.vc_tta-panels .vc_tta-panel.vc_active .vc_tta-panel-heading {
+		background-color: $primary;
+		border-color:$light-gray;
+
+		.vc_tta-title-text {
+			color: $white;
+		}
+	}
+	// Non-active Header Styles
+	.vc_tta-panels .vc_tta-panel .vc_tta-panel-heading {
+		background-color: $secondary;
+		border-color:$gray;
+
+		&:hover, &:focus {
+			background-color: darken($secondary, 10%);
+		}
+
+		.vc_tta-title-text {
+			color: $white;
+		}
+	}
+
+	// Color/style of plus and minus buttons
+
+	.vc_tta-controls-icon-position-left.vc_tta-panel-title a {
+		&:before {
+			content: "\f061"; // content is closed icon
+			font-family: $fontawesome;
+			position: absolute;
+			top:9px;
+			left:20px;
+			@include font-size(1.8);
+			line-height: 1.5;
+			color: $link-color;
+			font-weight: normal;
+		}
+	}
+	.vc_active .vc_tta-controls-icon-position-left.vc_tta-panel-title a {
+		&:before {
+			content: "\f063"; // content is open icon
+		}
+	}
+	.vc_tta-panels .vc_tta-panel .vc_tta-panel-title .vc_tta-controls-icon {
+		display: none !important;
+	}
+
+	// Styles for content sections
+	.vc_tta-panel-body {
+		background-color: $white !important;
+		color: $black !important;
+	}
+
+}
+
+/********************
+FAQ (Tipdown)
+********************/
+.vc_toggle {
+	.vc_toggle_title {
+		color: $link-color !important;
+		padding-left: 20px !important;
+
+		&:before {
+			content: "\f067"; // content is closed icon
+			font-family: $fontawesome;
+			@include font-size(1.8);
+			position: absolute;
+			left:0px;
+			top:2px;
+			line-height: 1.5;
+
+		}
+	}
+	.vc_toggle_title .vc_toggle_icon {
+		display: none !important;
+	}
+}
+.vc_toggle_active {
+	.vc_toggle_title {
+		&:before {
+			content: "\f068"; // content is open icon
+		}
+	}
+}
+
+/********************
+TABS/TABABLE CONTENT
+********************/
+.vc_tta-tabs {
+	.vc_tta-tab {
+		a {
+			border-color: $light-gray !important;
+			background-color: $gray !important;
+			color: $white !important;
+		}
+	}
+	.vc_active {
+		a {
+			border-color: $light-gray !important;
+			border-bottom:1px solid $white !important;
+			background-color: $white !important;
+			color: $black !important;
+		}
+		.vc_tta-panel-body {
+			background-color: $white !important;
+			border-color: $light-gray !important;
+		}
+	}
+}
+// for pagination tabable content
+.vc_tta-pageable {
+	.vc_tta-panel-body {
+		background-color: $white !important;
+		border: none !important;
+	}
+}
+
+/********************
+BUTTONS
+********************/
+.vc_general.vc_btn3:focus, 
+.vc_general.vc_btn3:hover {
+	border-bottom: 0;
+}
+
+/********************
+CALL TO ACTION
+********************/
+.vc_cta3 {
+	background-color: $accent !important;
+	border-color: darken($accent, 25%) !important;
+}
+
+/********************
+IMAGE
+********************/
+.wpb_single_image {
+	margin-bottom: 0;
+}
+.vc_grid-container {
+	margin-bottom: 0;
+}
+
+
+

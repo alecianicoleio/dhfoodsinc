@@ -1,0 +1,78 @@
+
+/*********************
+RECIPES
+*********************/
+
+.cooked-recipe-search {
+	@include clearfix();
+	display: none;
+}
+
+.cooked-recipe-grid {
+	@include clearfix();
+	position: relative;
+	margin-top: 40px !important;
+	margin-bottom: 0 !important; 
+	.cooked-recipe {
+		width: calc(100% - 14px) !important;
+		margin-left: 7px !important;
+		margin-right: 7px !important;
+		margin-bottom: 14px !important;
+		overflow: hidden;
+		@include respond-to(mobile) {
+			width: calc(50% - 14px)!important;
+		}
+		@include respond-to(tablet) {}
+	}
+}
+
+.cooked-pagination-numbered {
+	margin-top: 30px;
+	margin-bottom: 40px !important;
+	span,
+	a {
+		width: 40px; 
+		height: 40px;
+		border-radius: 20px; 
+		text-decoration: none;
+		margin: 5px;
+		line-height: 40px;
+		text-align: center;
+		color: $white;
+		font-weight: 500;
+	} 	
+	a { background: $yellow; }
+	span,
+	a:active,
+	a:hover, 
+	a:focus { background: $yellow-active; }
+}
+
+.cooked-recipe-gallery {
+	margin-bottom: 0 !important; 
+}
+.cooked-recipe-info {
+	background: $green;
+	margin-bottom: 0 !important;
+	padding: 15px 15px 5px 15px !important;
+	color: $white; 
+	a { color: $white; }
+	.cooked-left { 
+		text-align: left !important; 
+		float: left !important;
+    	display: inline-block !important;
+    	width: auto !important;
+	}
+	.cooked-right { 
+		text-align: right !important;
+		float: right !important;
+    	display: inline-block !important;
+    	width: auto !important; 
+	}
+}
+
+.cooked-recipe-excerpt { margin-top: 40px; }
+.fotorama__caption,
+.fotorama__nav-wrap { display: none !important; }
+
+

@@ -1,0 +1,70 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Stylesheet
+
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+*********************/
+/* Some Base Colors */
+/* Some Theme Specific Colors */
+/* Text and Link Colors */
+/*********************
+FONTS
+*********************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+RESPONSIVE
+*********************/
+/*********************
+BORDER RADIUS
+*********************/
+.box {
+  border-radius: 10px; }
+
+/*********************
+REM FONTS
+*********************/
+/*********************
+CLEARFIX
+*********************/
+/*********************
+TRANSITIONS
+*********************/
+/******************************************************************
+ADDITIONAL IE FIXES
+******************************************************************/

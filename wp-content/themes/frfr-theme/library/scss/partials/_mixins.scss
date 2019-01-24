@@ -1,0 +1,154 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+
+
+@mixin page-wrap() {
+  width: $site-width;
+  margin: 0 auto;
+  @include respond-to(large) {
+    width: 92%;
+  }
+}
+
+/*********************
+RESPONSIVE
+*********************/
+
+@mixin respond-to($breakpoint) {
+
+  @if $breakpoint == "mobile-sm" {
+    @media (min-width: 601px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == "mobile" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == "tablet" {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == "desktop" {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+
+
+  // 
+
+  @if $breakpoint == "small" {
+    @media (max-width: 481px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "medium" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "large" {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+
+}
+
+/*********************
+BORDER RADIUS
+*********************/
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { @include border-radius(10px); }
+
+
+/*********************
+REM FONTS
+*********************/
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+/*********************
+CLEARFIX
+*********************/
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/*********************
+TRANSITIONS
+*********************/
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+@mixin transition-property($property...) {
+    -moz-transition-property:    $property;
+    -o-transition-property:      $property;
+    -webkit-transition-property: $property;
+    transition-property:         $property;
+}
+@mixin transition-duration($duration...) {
+    -moz-transition-property:    $duration;
+    -o-transition-property:      $duration;
+    -webkit-transition-property: $duration;
+    transition-property:         $duration;
+}
+@mixin transition-timing-function($timing...) {
+    -moz-transition-timing-function:    $timing;
+    -o-transition-timing-function:      $timing;
+    -webkit-transition-timing-function: $timing;
+    transition-timing-function:         $timing;
+}
+@mixin transition-delay($delay...) {
+    -moz-transition-delay:    $delay;
+    -o-transition-delay:      $delay;
+    -webkit-transition-delay: $delay;
+    transition-delay:         $delay;
+}
+
+

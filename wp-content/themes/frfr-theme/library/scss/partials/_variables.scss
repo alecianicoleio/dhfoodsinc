@@ -1,0 +1,61 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+
+/*********************
+COLORS
+*********************/
+
+
+/* Some Base Colors */
+$white: 			#ffffff;
+$light-gray:        #F9F9F9;
+$gray:              #ECECEC;
+$dark-gray:         #9E9E9E;
+$black:             #494949;
+
+
+/* Some Theme Specific Colors */
+$yellow: 			#AD974F; 
+$yellow-active: 	#8E793E;
+$green: 			#3e8d6b;
+$green-active: 		#275843;
+$red: 				#F44336;
+$red-active: 		#E53935;
+$orange: 			#FF9800;
+$orange-active: 	#F57C00;
+$blue: 				#03A9F4;
+$blue-active: 		#039BE5;
+
+
+/* Text and Link Colors */
+$primary:			$black;
+$secondary:			$gray;
+$accent:			$light-gray;
+$text-color:        $black;
+$link-color:        $green;
+$link-hover:        $green-active;
+
+
+/*********************
+FONTS
+*********************/
+
+// font stacks
+$main-font:        'Lato', sans-serif;
+$fontawesome:	   "Font Awesome 5 Free";
+
+$site-width: 1200px;
+
+
+
+

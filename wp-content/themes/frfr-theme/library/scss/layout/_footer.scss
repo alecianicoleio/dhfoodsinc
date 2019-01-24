@@ -1,0 +1,139 @@
+/*********************
+FOOTER STYLES
+*********************/
+
+
+// BASE FOOTER STYLES
+
+.footer {
+	clear: both;
+	background: $green;
+}
+
+.footer .widget {
+	padding: 0; 
+}
+
+.sidebar-interior .widget:first-child { display: none; }
+
+
+// INSTAGRAM WIDGET 
+.footer .widget:first-child {
+	margin: 0;
+	background: $black;
+	.sbi_photo_wrap { opacity: 0.5; }
+}
+
+// MAILCHIMP WIDGET
+.footer .widget:last-child {
+
+	@include page-wrap();
+
+	.textwidget {
+		//border: 1px solid red;
+		margin: 50px 0;
+		color: $white;
+		h2 { 
+			margin: 0; 
+			text-transform: uppercase;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		p {
+			@include font-size(1.8);
+			text-align: center;
+		}
+		p:last-child { 
+			display: none; 
+		}
+	}
+
+
+	.mc4wp-form-fields {
+	
+		margin-top: 50px; 
+		label,
+		input {
+			width: 100%;
+			max-width: 100%; 
+			margin: 0;
+			margin-bottom: 20px;	
+		}
+		input {
+			height: 50px;
+			background: $green-active;
+			border: 1px solid transparent;
+			color: white important;
+			padding-left: 15px;
+			padding-right: 15px;
+			&::placeholder {
+				color: $light-gray;
+			}
+			&:focus {
+				color: $white;
+			}
+		}
+		input:last-child {
+			background: $white;
+			border-radius: 4px;
+			color: $green;
+			text-transform: uppercase;
+		}
+	}
+
+	@include respond-to(mobile) { 
+		.mc4wp-form-fields {
+			@include clearfix();
+
+			input { 
+				width: 32%;
+				float: left;
+			}
+			input:first-child,
+			input:nth-child(2) {
+				margin-right: 2%;
+			}
+		}
+	}
+}
+
+
+.footer nav {
+
+	.footer-links {
+		@include page-wrap();	
+		text-align: center;
+		a {
+			color: $white; 
+			text-transform: uppercase;
+			text-decoration: none;
+		}
+		a:active, a:hover {
+			color: $gray;
+		}
+	}
+
+} 
+
+
+.footer .copyright {
+	background: $green-active;
+	margin: 0;
+	padding: 16px 0; 
+	div { 
+		@include page-wrap; 
+		@include clearfix;
+	}
+	p {
+		color: $white;
+		
+	}
+	@include respond-to(mobile) {
+		p { float: left; }
+		p:first-child { width: 30% }
+		p:last-child { 
+			width: 70%; 
+			text-align: right;
+		}
+	}
+}

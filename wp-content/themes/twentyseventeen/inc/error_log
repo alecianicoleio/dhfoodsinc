@@ -1,0 +1,4 @@
+[06-Dec-2018 06:36:25 America/New_York] PHP Fatal error:  Call to undefined function add_action() in /home/hummpqfx/dhfoodsinc/wp-content/themes/twentyseventeen/inc/template-tags.php on line 196
+[06-Dec-2018 06:59:12 America/New_York] PHP Fatal error:  Call to undefined function add_action() in /home/hummpqfx/dhfoodsinc/wp-content/themes/twentyseventeen/inc/template-tags.php on line 196
+[06-Dec-2018 23:24:42 America/New_York] PHP Fatal error:  Call to undefined function add_action() in /home/hummpqfx/dhfoodsinc/wp-content/themes/twentyseventeen/inc/icon-functions.php on line 22
+[06-Dec-2018 23:25:36 America/New_York] PHP Fatal error:  Call to undefined function add_action() in /home/hummpqfx/dhfoodsinc/wp-content/themes/twentyseventeen/inc/icon-functions.php on line 22

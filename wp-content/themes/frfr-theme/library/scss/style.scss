@@ -1,0 +1,62 @@
+/*! Made with Bones: http://themble.com/bones :) */
+
+/******************************************************************
+Site Name: Discount Health Foods	
+Author: Alecia Frederick
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions
+
+******************************************************************/
+
+/*********************
+IMPORTING PARTIALS
+*********************/
+@import "partials/normalize";
+@import "partials/variables";
+@import "partials/mixins";
+
+
+/*********************
+IMPORTING MODULES
+Modules are reusable blocks or elements we use throughout the project.
+*********************/
+@import "layout/base";
+@import "modules/buttons";
+@import "modules/forms";
+@import "layout/typography";
+@import "modules/page-styles";
+@import "modules/visual-composer";
+@import "modules/slider";
+
+
+/*********************
+LAYOUT STYLES
+*********************/
+@import "layout/navigation";
+@import "layout/footer";
+
+
+/*********************
+PAGE & PLUGIN STYLES
+*********************/
+@import "plugins/cooked";
+@import "pages/home";
+@import "pages/coupons";
+@import "pages/articles";
+@import "pages/recipes";
+
+
+/*********************
+PRINT STYLESHEET
+*********************/
+@media print {
+	@import "partials/print";
+}

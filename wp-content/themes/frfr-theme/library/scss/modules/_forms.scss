@@ -1,0 +1,110 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Form Styles
+
+We put all the form and button styles in here to setup a consistent
+look. If we need to customize them, we can do this in the main
+stylesheets and just override them. Easy Peasy.
+
+You're gonna see a few data-uri thingies down there. If you're not
+sure what they are, check this link out:
+http://css-tricks.com/data-uris/
+If you want to create your own, use this helpful link:
+http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/
+
+******************************************************************/
+
+/*********************
+INPUTS
+*********************/
+
+// setting up defaults
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea,
+.field {
+    display: block;
+  height: 40px;
+  line-height: 1px;
+  padding: 0 4%;
+  margin-bottom: 14px;
+  @include font-size(1.6);
+  color: $text-color;
+  border-radius: 3px;
+  vertical-align: middle;
+  box-shadow: none;
+  border: 0;
+  width: 91%;
+  max-width: 400px;
+  font-family: $main-font;
+  border: 1px solid $light-gray;
+
+  // a focused input (or hovered on)
+  &:focus,
+  &:active {
+    outline: none;
+  } // end hover or focus
+
+  // error notification
+  &.error,
+  &.is-invalid {
+
+  } // end invalid input
+
+  // success notification
+  &.success,
+  &.is-valid {
+
+  } // end valid input
+
+  // a disabled input
+  &[disabled],
+  &.is-disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+
+    &:focus,
+    &:active {
+
+    } // end disabled focus
+
+  } // end disabled input
+
+} // end input defaults
+
+// spacing out the password (thx @murtaugh)
+input[type="password"] {
+  letter-spacing: 0.4rem;
+}
+
+// textareas
+textarea {
+  max-width: 100%;
+  min-height: 120px;
+  line-height: 1.5;
+}
+
+// selects
+select {
+  -webkit-appearance: none; /* 1 */
+  -moz-appearance: none;
+  appearance: none;
+
+}
+
+
