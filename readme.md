@@ -3,7 +3,7 @@
 This projects is a custom themed WordPress marketing site built for a mom and pop grocer, [Discount Health Foods](http://www.dhfoodsinc.com). This project is made available for inspiration, but please don't use without modification. 
 
 ## External resources
-* Theme starter template via [BONES](https://html5boilerplate.com/)
+* Theme starter template via [BONES]()
 * Lato font via [Google Fonts](https://fonts.google.com/specimen/Lato)
 * Icons via [Font Awesome](https://fontawesome.com/)
 * Stock photos via [Pexels](https://www.pexels.com)
